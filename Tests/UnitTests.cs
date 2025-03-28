@@ -4,7 +4,7 @@ namespace GithubActionsLab;
 public class Addition
 {
 	[TestMethod]
-	public void Add_Valid_Patino()
+	public void Add_Valid_Davis()
 	{
 		Assert.AreEqual(3, Program.Add("1", "2"));
 		Assert.AreEqual(5, Program.Add("3", "2"));
@@ -12,7 +12,7 @@ public class Addition
 	}
 
 	[TestMethod]
-	public void Add_Invalid_Patino()
+	public void Add_Invalid_Davis()
 	{
 		Assert.ThrowsException<FormatException>(() => Program.Add("1", "a"));
 		Assert.ThrowsException<FormatException>(() => Program.Add("a", "1"));
@@ -20,7 +20,7 @@ public class Addition
 	}
 
 	[TestMethod]
-	public void Add_Null_Patino()
+	public void Add_Null_Davis()
 	{
 		Assert.ThrowsException<ArgumentNullException>(() => Program.Add("1", null));
 		Assert.ThrowsException<ArgumentNullException>(() => Program.Add(null, "1"));
@@ -33,15 +33,15 @@ public class Addition
 public class Subtraction
 {
     [TestMethod]
-    public void Subtract_Valid()
+    public void Subtract_Valid_Davis()
     {
         Assert.AreEqual(3, Program.Subtract("6", "3"));
-        Assert.AreEqual(2, Program.Subtract("7", "4"));
+        Assert.AreEqual(2, Program.Subtract("6", "4"));
         Assert.AreEqual(1, Program.Subtract("9", "8"));
     }
 
     [TestMethod]
-    public void Subtract_Invalid()
+    public void Subtract_Invalid_Davis()
     {
         Assert.ThrowsException<FormatException>(() => Program.Subtract("1", "a"));
         Assert.ThrowsException<FormatException>(() => Program.Subtract("a", "1"));
@@ -49,7 +49,7 @@ public class Subtraction
     }
 
     [TestMethod]
-    public void Subtract_Null()
+    public void Subtract_Null_Davis()
     {
         Assert.ThrowsException<ArgumentNullException>(() => Program.Subtract("1", null));
         Assert.ThrowsException<ArgumentNullException>(() => Program.Subtract(null, "1"));
@@ -60,7 +60,7 @@ public class Subtraction
 public class Multiplication
 {
     [TestMethod]
-    public void Multiply_Valid()
+    public void Multiply_Valid_Davis()
     {
         Assert.AreEqual(6, Program.Multiply("2", "3"));
         Assert.AreEqual(15, Program.Multiply("5", "3"));
@@ -68,7 +68,7 @@ public class Multiplication
     }
 
     [TestMethod]
-    public void Multiply_Invalid()
+    public void Multiply_Invalid_Davis()
     {
         Assert.ThrowsException<FormatException>(() => Program.Multiply("1", "a"));
         Assert.ThrowsException<FormatException>(() => Program.Multiply("a", "1"));
@@ -76,7 +76,7 @@ public class Multiplication
     }
 
     [TestMethod]
-    public void Multiply_Null()
+    public void Multiply_Null_Davis()
     {
         Assert.ThrowsException<ArgumentNullException>(() => Program.Multiply("1", null));
         Assert.ThrowsException<ArgumentNullException>(() => Program.Multiply(null, "1"));
@@ -88,7 +88,7 @@ public class Multiplication
 public class Division
 {
     [TestMethod]
-    public void Divide_Valid()
+    public void Divide_Valid_Davis()
     {
         Assert.AreEqual(2, Program.Divide("6", "3"));
         Assert.AreEqual(2.5, Program.Divide("5", "2"));
@@ -96,7 +96,7 @@ public class Division
     }
 
     [TestMethod]
-    public void Divide_Invalid()
+    public void Divide_Invalid_Davis()
     {
         Assert.ThrowsException<FormatException>(() => Program.Divide("1", "a"));
         Assert.ThrowsException<FormatException>(() => Program.Divide("a", "1"));
@@ -104,7 +104,7 @@ public class Division
     }
 
     [TestMethod]
-    public void Divide_Null()
+    public void Divide_Null_Davis()
     {
         Assert.ThrowsException<ArgumentNullException>(() => Program.Divide("1", null));
         Assert.ThrowsException<ArgumentNullException>(() => Program.Divide(null, "1"));
@@ -112,7 +112,7 @@ public class Division
     }
 
     [TestMethod]
-    public void Divide_ByZero()
+    public void Divide_ByZero_Davis()
     {
         Assert.ThrowsException<DivideByZeroException>(() => Program.Divide("5", "0"));
     }
@@ -122,7 +122,7 @@ public class Division
 public class Exponentiation
 {
     [TestMethod]
-    public void Power_Valid()
+    public void Power_Valid_Davis()
     {
         Assert.AreEqual(8, Program.Power("2", "3"));
         Assert.AreEqual(1, Program.Power("5", "0"));
@@ -130,7 +130,7 @@ public class Exponentiation
     }
 
     [TestMethod]
-    public void Power_Invalid()
+    public void Power_Invalid_Davis()
     {
         Assert.ThrowsException<FormatException>(() => Program.Power("2", "a"));
         Assert.ThrowsException<FormatException>(() => Program.Power("a", "2"));
@@ -138,7 +138,7 @@ public class Exponentiation
     }
 
     [TestMethod]
-    public void Power_Null()
+    public void Power_Null_Davis()
     {
         Assert.ThrowsException<ArgumentNullException>(() => Program.Power("2", null));
         Assert.ThrowsException<ArgumentNullException>(() => Program.Power(null, "2"));
