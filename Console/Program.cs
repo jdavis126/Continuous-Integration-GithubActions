@@ -80,17 +80,16 @@ public class Program
 
 	public static double Divide(string x, string y)
 	{
+		if(double.Parse(y) == 0)
+		{
+			throw new DivideByZeroException("Cannot divide by zero.");
+		}
 		return double.Parse(x) / double.Parse(y);
 	}
 
 	// Implement this method following a similar pattern as above
 	public static double Power(string x, string y)
 	{
-		double result = 1;
-		for (int i = 0; i < double.Parse(y); i++)
-		{
-			result *= double.Parse(x);
-		}
-		return result;
+		return Math.Pow(double.Parse(x), double.Parse(y));
 	}
 }
